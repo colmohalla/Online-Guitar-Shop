@@ -1,0 +1,303 @@
+html {
+    position: relative;
+    height: 100%;
+}
+
+
+body {
+    margin-bottom: 60px;
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+li a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+
+}
+
+.user {
+    font-size: 16px;
+    background-color: white;
+    border:none;
+    border-radius: 20px;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgb(10, 10, 31);
+}
+
+nav li a {
+    align-items: flex-end;
+    list-style-type: none;
+}
+
+.store a {
+    cursor: pointer;
+    color: white;
+    font-size:1.3em;
+    text-decoration: none;
+}
+
+.nav {
+    list-style: none
+}
+
+.nav li {
+    display: inline-block;
+    padding: 0 1.1em;
+}
+
+
+.nav li a:hover {
+    color: #0088a9;
+}
+
+button {
+    padding: 1em 2.5em;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+td > a{
+    color: black;
+    background-color: blue;
+    padding: 1em 2.5em;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+.guitars {
+    border: 1px solid black;
+    display: flex;
+}
+
+.guitars li {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+li {
+    display: inline;
+    list-style-type: none;
+}
+
+.form {
+    padding: 4em 10em;
+    margin: 2em 8em;
+    display: grid;
+    flex-direction:row;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    align-items: center;
+    text-align: center;
+    display:block;
+    padding: 5em 4em;
+    margin: auto;
+}
+
+.form ul li {
+    padding: 0.2em 1em;
+    display: block;
+    margin: 0 ;
+
+}
+
+h2, h3 {
+    text-align: center;
+    padding: 1em;
+}
+
+.index p {
+    text-align: center ;
+    display: block;
+    padding: 5em;
+    margin: 3em;
+}
+
+
+h3 > a > button {
+    background-color: black;
+    color: white;
+}
+
+h3 >  a > button:hover {
+    background-color: grey;
+    color: black;
+}
+
+p {
+    text-align: center;
+    padding: 2em;
+}
+
+p > a > button {
+    background-color: black;
+    color: white;
+}
+
+p > a > button:hover {
+    background-color: grey;
+    color: black;
+}
+
+td > a {
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+td > a:hover {
+    background-color: black;
+    color: white;
+}
+
+.total {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+table {
+    border: solid grey;
+    margin: auto;
+    padding: 3em 3em 2em 2em;
+}
+
+td {
+    padding: 2em;
+}
+
+.total ~ td > a{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 30px; 
+    cursor: pointer;
+}
+
+.total ~ td > a:hover {
+    background-color: grey;
+    color: black;
+}
+
+b {
+    font-size:1.3em;
+}
+
+
+li a button {
+    background-color: grey;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+li a button:hover {
+    background-color: black;
+    color: white;
+}
+
+.guitars {
+    display: grid;
+    list-style: none;
+}
+
+li img {
+    align-content: center;
+}
+
+
+.title {
+    display: grid;
+    list-style: none;
+}
+
+.guitars li {
+    float: left;
+    margin: auto;
+    list-style: none;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p > img {
+    align-content: center;
+    margin:auto;
+    padding: 1em 1em;
+}
+
+.add {
+    background-color: black;
+    color: white;
+}
+
+p {
+    margin: 0 0;
+}
+
+.attribution li {
+    
+    color: black;
+    font-weight: bold;
+    padding: 0 1em;
+}
+
+footer {
+    padding: 3em 0.2em;
+    background-color: rgb(10, 10, 31);
+    margin-bottom: 0px;
+    width: 100%;
+    position: sticky;
+    top: 100%;
+}
+
+
+.attribution a:hover {
+    color: #0088a9;
+}
+
+p > img {
+    margin: auto;
+    padding-bottom: 2em;
+}
+
+.descr {
+    padding: 2%;
+}

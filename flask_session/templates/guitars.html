@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    
+ 
+
+    <h1>GUITARS</h1>
+    
+        {% for guitar in guitars %}
+        <h3 class="title">{{ guitar["name"] }}</h3>
+            <ul class="guitars">
+                <li><img src="{{url_for('static', filename=guitars['image']) }}"></li>
+                <li>{{ guitar["price"] }} </li>
+                <li><a href=" {{ url_for('guitar', guitar_id=guitar['guitar_id']) }}"><button>See details </button></a></li>
+            </ul> 
+        {% endfor %}
+
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h2>{{ guitar["name"]}}</h2>
+    <h3> 
+         £{{guitar["price"] }}
+         <br/>
+         <br/>
+        <a href="{{ url_for('add_to_cart', guitar_id=guitar['guitar_id']) }}"><button class="add">Add to cart</button></a>
+    </h3>
+    <p><img src="{{url_for('static',filename=guitar['image'])}}"> </p>
+    <p class="descr">{{ guitar["description"]}}</p>
+    
+    
+
+
+{% endblock %}

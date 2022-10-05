@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h2>Your cart</h2>
+    {% if cart %}
+        <table>
+            <tr class="headers">
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+            </tr>
+            {% for guitar_id in cart %}
+           		
+            <tr>
+                <td><b>{{ names[guitar_id] }}</b></td>
+                <td><button>{{ cart[guitar_id] }}</button></td>
+                <td>{{ prices[guitar_id] }}</td>
+                <td>{{ price[guitar_id] }}</td>
+                <td><a href="{{ url_for('remove_cart') }}">Remove</a></td>
+            
+            </tr>
+            {% endfor %}
+            <td></td>
+            <td></td>
+            <td class="total">£{{ total }}</td>
+            <td><a href="{{ url_for('checkout') }}">Checkout</a></td>
+        </table>
+        
+
+    {% else %}
+        <p>Your Cart is Empty!</p>
+    {% endif %}
+
+{% endblock %}

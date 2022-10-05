@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+{{ message }}
+
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    {{ form.first_name.label }}
+    {{ form.first_name() }}
+    {% for error in form.first_name.errors %}
+        {{ error }}
+    {% endfor %}
+    <br />
+    {{ form.surname.label }}
+    {{ form.surname() }}
+    {% for error in form.surname.errors %}
+        {{ error }}
+    {% endfor %}
+    <br />
+    {{ form.address.label }}
+    {{ form.address() }}
+    {% for error in form.address.errors %}
+        {{ error }}
+    {% endfor %}
+    <br />
+    <br/>
+    {{ form.delivery_method.label }}
+    {{ form.delivery_method() }}
+    <br />
+    {{ form.submit() }}
+    </form>
+    {% if cart %}
+        <table>
+            <tr class="headers">
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+            </tr>
+            {% for guitar_id in cart %}
+           		
+            <tr>
+                <td><b>{{ names[guitar_id] }}</b></td>
+                <td><button>{{ cart[guitar_id] }}</button></td>
+                <td>{{ prices[guitar_id] }}</td>
+                <td><a href="{{ url_for('cart') }}">Edit</a></td>
+            </tr>
+            {% endfor %}
+            <td></td>
+            <td></td>
+            <td class="total">£{{ total }}</td>
+            </table>
+    {% endif %}
+
+{% endblock %}

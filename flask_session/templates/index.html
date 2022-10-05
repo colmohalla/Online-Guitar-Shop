@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    
+    {% if g.user %}
+    
+    <p> {{ message }}</p> 
+        {% if checkout %}
+            <p> {{ message }}</p>
+            
+        {% else %}
+            <p class="index">You can view our selection of guitars here: 
+                <a href="{{ url_for('guitars') }}">Guitars</a></p>
+        {% endif %} 
+    {% else %}
+            <p>Welcome to HALLA GUITARS! If you don't have an account, <a href="{{ url_for('register') }}"><button>Please Register Here</button></a> </p>
+            
+             
+    {% endif %} 
+    
+    <p><img src="{{ url_for('static',filename='main_photo.jpg') }}"></p>
+    <p><small>Image by <a href="https://pixabay.com/users/obbilder-3192627/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1736291">obBilder</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1736291">Pixabay</a></small></p>
+{% endblock %}
+<footer> 
+
+
+<!-- Image by <a href="https://pixabay.com/users/obbilder-3192627/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1736291">obBilder</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1736291">Pixabay</a> -->

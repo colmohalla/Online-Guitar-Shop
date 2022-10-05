@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+
+{% if message %}
+    <h2>{{ message }}</h2>
+    <h3><a href="{{ url_for('quote') }}"><button>Email me a quote!</button></a></h3>
+{% endif %}
+
+
+<form action="" method="post" novalidate class="form">
+    <ul>
+   <li> {{ form.hidden_tag() }} </li>
+   <li><b>{{ form.shape.label }} </b>  </li>
+   <li>{{ form.shape() }} </li>
+    </ul>
+    <br />
+    <b>{{ form.colour.label }}</b> 
+    {{ form.colour() }}
+    <br />
+    <b>{{ form.wood.label }}</b>
+    {{ form.wood() }}
+    <br />
+    <b>{{ form.pickup.label }}</b>
+    {{ form.pickup() }}
+    <br />
+    {{ form.submit() }}
+    <br />
+    
+</form>
+
+{% endblock %}

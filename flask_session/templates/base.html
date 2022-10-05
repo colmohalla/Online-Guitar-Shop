@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Halla Guitars</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='myfavicon.ico') }}">
+    
+    </head>
+    <body>
+    <header>
+        <h1 class="store"><a href="{{ url_for('index') }}">HALLA GUITARS</a></h1>
+        {% if g.admin %}
+            <nav>
+                <ul class="nav">
+                <li class="user">Admin: {{ g.admin }}</li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                <li><a href="{{ url_for('guitars') }}">Guitars</a></li>
+                <li><a href="{{ url_for('update_stock') }}"><button>Update Stock</button></a></li>
+                </ul>
+            </nav>
+        {% elif g.user %}
+        <nav>
+            <ul class="nav">
+            <li class="user">User: {{ g.user }}</li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            <li><a href="{{ url_for('guitars') }}">Guitars</a></li>
+            <li><a href="{{ url_for('build_your_own') }}">Build Your Own</a></li>
+            <li><a href="{{ url_for('orders') }}">Orders</a></li>
+            </ul>
+        </nav>
+        <a href="{{ url_for('cart') }}"><button>Your Cart</button></a>
+        
+        {% else %}
+            <nav>
+                <ul class="nav">
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('admin') }}">Admin</a></li>
+                <li><a href="{{ url_for('guitars') }}">Guitars</a></li>
+                </ul>
+            </nav>
+        {% endif %}
+
+            </nav>  
+        
+        
+    </header>
+        {% block main_content %} {% endblock %}
+    </body>
+    <footer> 
+        <ul class="attribution">
+            <li><a href="https://commons.wikimedia.org/wiki/File:1958_Fender_Stratocaster.jpg">Stratocaster image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Les_Paul_Traditional.jpg">Les Paul image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Gibson_SG_Standard_natural_sunburst_in_Case_(photographed_by_Roadside_Guitars).jpg">SG image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Fender-jazzmaster.jpg">Jazzmaster image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Fender_Telecaster_American_Vintage_1952_transparent.png">Tele image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Gibson_Flying_V_68_Reissue_-_Classic_White_(5847993521).jpg">Flying-V image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Gibson-Explorer.jpg">Explorer</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Fender_Jaguar_Baritone_Custom_(2005)_in_the_case.jpg">Jaguar image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Gibson_ES-335_sunburst.jpg">ES-335 image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Fender_mustang_vintage_white.jpg">Mustang image</a></li>
+        </ul>
+    </footer>
+</html>
